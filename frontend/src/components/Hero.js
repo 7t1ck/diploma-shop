@@ -1,32 +1,34 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-gray-900 via-blue-900/20 to-gray-900 py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.15),transparent_50%)]"></div>
-      
-      <div className="max-w-7xl mx-auto px-6 relative">
-        <div className="max-w-2xl">
-          <span className="inline-block bg-blue-500/10 text-blue-400 text-sm px-4 py-1 rounded-full mb-4 border border-blue-500/30">
-            🔥 Новинки 2025
-          </span>
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Цифрові гаджети <br/>
-            <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-              нового покоління
-            </span>
-          </h2>
-          <p className="text-gray-400 text-lg mb-8">
-            Знайди свій ідеальний гаджет серед сотень моделей від провідних світових брендів. 
-            Швидка доставка, гарантія якості та кращі ціни.
+    <section className="bg-zinc-950 border-b border-zinc-900">
+      <div className="w-full px-4 md:px-8 lg:px-12 py-16 md:py-24">
+        <div className="max-w-3xl">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white tracking-tight mb-6 leading-tight">
+            Цифрова техніка <br/>
+            <span className="text-teal-400">для роботи та життя</span>
+          </h1>
+          <p className="text-zinc-400 text-base md:text-lg mb-8 max-w-xl leading-relaxed">
+            Смартфони, ноутбуки, планшети та аудіотехніка від перевірених виробників. 
+            Доставка по всій Україні.
           </p>
-          <div className="flex gap-4">
-            <button className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-medium transition">
-              Перейти в каталог
-            </button>
-            <button className="border border-gray-700 hover:border-gray-500 text-white px-8 py-3 rounded-lg font-medium transition">
-              Дізнатись більше
-            </button>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link 
+              to="/catalog" 
+              className="inline-flex items-center justify-center gap-2 bg-teal-400 hover:bg-teal-300 text-zinc-950 px-6 py-3 rounded font-medium transition"
+            >
+              Перейти до каталогу
+              <ArrowRight size={18} strokeWidth={2} />
+            </Link>
+            <Link 
+              to="/catalog?sort=price_asc" 
+              className="inline-flex items-center justify-center gap-2 border border-zinc-800 hover:border-zinc-700 text-zinc-300 hover:text-white px-6 py-3 rounded font-medium transition"
+            >
+              Дивитись доступні
+            </Link>
           </div>
         </div>
       </div>

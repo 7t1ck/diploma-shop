@@ -48,12 +48,19 @@ export const cartAPI = {
   remove: (id) => api.delete(`/cart/${id}`),
 };
 
-// API замовлень (зробимо пізніше)
+// API замовлень
 export const ordersAPI = {
   create: (data) => api.post('/orders', data),
   getMyOrders: () => api.get('/orders/my'),
   getAll: () => api.get('/orders'),
   updateStatus: (id, status) => api.put(`/orders/${id}/status`, { status }),
+};
+
+// API адмінки
+export const adminAPI = {
+  getStats: () => api.get('/admin/stats'),
+  getUsers: () => api.get('/admin/users'),
+  updateUser: (id, data) => api.put(`/admin/users/${id}`, data),
 };
 
 export default api;
