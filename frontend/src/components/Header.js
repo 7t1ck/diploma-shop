@@ -36,9 +36,9 @@ const handleLogout = () => {
           {/* Лого */}
           <Link to="/" className="flex items-center gap-2 shrink-0">
             <div className="w-9 h-9 bg-teal-400 rounded flex items-center justify-center">
-              <span className="text-zinc-950 font-bold text-lg">Ц</span>
+              <span className="text-zinc-950 font-bold text-lg">🌯</span>
             </div>
-            <span className="text-xl font-semibold text-white tracking-tight">Цифра</span>
+            <span className="text-xl font-semibold text-white tracking-tight">Телефон от Ахмеда</span>
           </Link>
 
           {/* Навігація - десктоп */}

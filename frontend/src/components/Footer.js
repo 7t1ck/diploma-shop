@@ -10,9 +10,9 @@ function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-3">
               <div className="w-8 h-8 bg-teal-400 rounded flex items-center justify-center">
-                <span className="text-zinc-950 font-bold">Ц</span>
+                <span className="text-zinc-950 font-bold">🌯</span>
               </div>
-              <span className="text-lg font-semibold text-white">Цифра</span>
+              <span className="text-lg font-semibold text-white">Телефон от Ахмеда</span>
             </div>
             <p className="text-zinc-500 text-sm leading-relaxed max-w-sm">
               Магазин цифрової техніки. Офіційна гарантія, доставка по Україні.
@@ -42,7 +42,7 @@ function Footer() {
         </div>
 
         <div className="border-t border-zinc-900 mt-8 pt-5 text-xs text-zinc-600">
-          © 2025 Цифра. Всі права захищені.
+          
         </div>
       </div>
     </footer>
