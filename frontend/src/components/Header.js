@@ -35,10 +35,10 @@ const handleLogout = () => {
         <div className="flex items-center justify-between h-16">
           {/* Лого */}
           <Link to="/" className="flex items-center gap-2 shrink-0">
-            <div className="w-9 h-9 bg-teal-400 rounded flex items-center justify-center">
-              <span className="text-zinc-950 font-bold text-lg">🌯</span>
+            <div className="w-11 h-11 bg-teal-600 rounded flex items-center justify-center">
+              <span className="text-zinc-950 font-bold text-lg">К</span>
             </div>
-            <span className="text-xl font-semibold text-white tracking-tight">Телефон от Ахмеда</span>
+            <span className="text-xl font-semibold text-white tracking-tight">Кантама</span>
           </Link>
 
           {/* Навігація - десктоп */}

@@ -14,10 +14,10 @@ const pool = mysql.createPool({
 // Перевірка підключення
 pool.getConnection((err, connection) => {
   if (err) {
-    console.error('❌ Помилка підключення до MySQL:', err.message);
+    console.error('Помилка підключення до MySQL:', err.message);
     return;
   }
-  console.log('✅ Підключено до MySQL бази даних: techshop');
+  console.log('Підключено до MySQL: techshop');
   connection.release();
 });
 

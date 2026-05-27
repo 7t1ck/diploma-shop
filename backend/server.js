@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 // Тестовий маршрут
 app.get('/', (req, res) => {
   res.json({ 
-    message: '🚀 TechShop API працює!',
+    message: 'TechShop API працює',
     version: '1.0.0',
     endpoints: {
       products: '/api/products',
@@ -31,7 +31,7 @@ app.get('/api/test-db', async (req, res) => {
     const [rows] = await db.query('SELECT COUNT(*) as count FROM products');
     res.json({ 
       success: true, 
-      message: 'БД працює!',
+      message: 'БД працює',
       productsCount: rows[0].count 
     });
   } catch (error) {
@@ -54,6 +54,6 @@ app.use((req, res) => {
 // Запуск сервера
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`\n🚀 Сервер запущено на http://localhost:${PORT}`);
-  console.log(`📊 API доступне на http://localhost:${PORT}/api\n`);
+  console.log(`\n Сервер запущено: http://localhost:${PORT}`);
+  console.log(` API доступне: http://localhost:${PORT}/api\n`);
 });
