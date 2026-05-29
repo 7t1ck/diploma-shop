@@ -69,6 +69,23 @@ exports.register = async (req, res) => {
     console.error('Register error:', error);
     res.status(500).json({ success: false, error: error.message });
   }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return res.status(400).json({ 
+      success: false, 
+      error: 'Невірний формат email' 
+    });
+  }
+    if (phone) {
+    const phoneRegex = /^\+?[0-9]{10,13}$/;
+    if (!phoneRegex.test(phone.replace(/\s/g, ''))) {
+      return res.status(400).json({ 
+        success: false, 
+        error: 'Невірний формат телефону' 
+      });
+    }
+  }
+  
 };
 
 // POST /api/auth/login

@@ -57,3 +57,17 @@ app.listen(PORT, () => {
   console.log(`\n Сервер запущено: http://localhost:${PORT}`);
   console.log(` API доступне: http://localhost:${PORT}/api\n`);
 });
+//rate limiting
+const rateLimit = require('express-rate-limit');
+
+const authLimiter = rateLimit({
+  windowMs: 2 * 60* 1000, //2хвилини
+  max: 5, //5спроб
+  message: 'Забагато спроб входу, спробуйте через 2 хвилини'
+});
+
+app.use('/api/auth/login', authLimiter)
+app.use('/api/auth/register', authLimiter)
+
+const helmet = require('helmet');
+app.use(helmet());
