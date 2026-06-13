@@ -24,6 +24,18 @@ function CatalogPage() {
   }, []);
 
   useEffect(() => {
+    setFilters({
+      category: searchParams.get('category') || '',
+      brand: searchParams.get('brand') || '',
+      search: searchParams.get('search') || '',
+      minPrice: searchParams.get('minPrice') || '',
+      maxPrice: searchParams.get('maxPrice') || '',
+      sort: searchParams.get('sort') || '',
+    });
+  }, [searchParams]);
+
+
+  useEffect(() => {
     loadProducts();
   }, [filters]);
 

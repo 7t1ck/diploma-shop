@@ -25,9 +25,19 @@ const handleLogout = () => {
   ];
 
   const isActive = (to) => {
-    if (to === '/') return location.pathname === '/';
-    return location.pathname + location.search === to || location.pathname.startsWith(to.split('?')[0]) && to !== '/';
-  };
+  const [toPath, toQuery] = to.split('?');
+  const currentQuery = new URLSearchParams(location.search);
+  const linkQuery = new URLSearchParams(toQuery || '');
+
+  // Шлях має збігатися точно
+  if (location.pathname !== toPath) return false;
+
+  // Якщо у посилання є категорія — порівнюємо категорії
+  const linkCategory = linkQuery.get('category');
+  const currentCategory = currentQuery.get('category');
+
+  return linkCategory === currentCategory;
+};
 
   return (
     <header className="bg-zinc-950 border-b border-zinc-800 sticky top-0 z-50">
